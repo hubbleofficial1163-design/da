@@ -55,6 +55,8 @@
             width: 405px;
             height: 435px;
             overflow: visible;
+                transform: scale(1.2); /* или нужный вам размер */
+    transform-origin: left top; /* чтобы масштабировалось от левого верхнего угла */
         }
         
         @media screen and (max-width: 479px) {
@@ -70,7 +72,8 @@
         .invitation-text {
             position: absolute;
             top: 411px;
-            left: 617px;
+            /* left: 617px; */
+            right: 100px;
             color: #000000;
             font-size: 20px;
             font-weight: 500;
@@ -81,7 +84,8 @@
         .names-text {
             position: absolute;
             top: 443px;
-            left: 464px;
+            /* left: 464px; */
+            right: 100px;
             color: #000000;
             font-size: 26px;
             font-weight: 500;
@@ -94,7 +98,8 @@
         .date-text {
             position: absolute;
             top: 504px;
-            left: 608px;
+            /* left: 608px; */
+            right: 100px;
             color: #000000;
             font-size: 20px;
             font-weight: 500;
@@ -105,7 +110,8 @@
         .line {
             position: absolute;
             top: 535px;
-            left: 711px;
+            right: 100px;
+            left: auto;
             width: 110px;
             height: 1px;
             background-color: #000000;
@@ -116,24 +122,28 @@
         @media screen and (max-width: 479px) {
             .invitation-text {
                 top: 338px;
-                left: 107px;
+                /* left: 107px; */
+                right: 20px;
                 font-size: 16px;
             }
             .names-text {
                 top: 368px;
-                left: 70px;
+                /* left: 70px; */
+                right: 20px;
                 font-size: 20px;
                 white-space: normal;
                 width: 240px;
             }
             .date-text {
                 top: 439px;
-                left: 98px;
+                /* left: 98px; */
+                right: 20px;
                 font-size: 18px;
             }
             .line {
                 top: 467px;
-                left: 211px;
+                /* left: 211px; */
+                right: 20px;
                 width: 100px;
             }
         }
@@ -189,17 +199,10 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
         </div>
         
         <!-- Текстовые элементы (появляются после анимации) -->
-        <div class="invitation-text">Приглашение на свадьбу</div>
         <div class="names-text">Максима и анастасии</div>
         <div class="date-text">1 августа 2026</div>
         <div class="line"></div>
         
-        <!-- Мерцающая точка -->
-        <div class="dot">
-            <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 0L21.3923 12.75H0.607696L11 0Z" fill="black"/>
-            </svg>
-        </div>
     </div>
     
     <!-- GSAP для анимации рисования -->
@@ -245,7 +248,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
             { strokeDashoffset: 3000 },
             { 
                 strokeDashoffset: 0, 
-                duration: 8, 
+                duration: 15, 
                 ease: "power2.out",
                 delay: 0.5,
                 scrollTrigger: {
@@ -263,7 +266,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
             { 
                 opacity: 1, 
                 duration: 1, 
-                delay: 4.5,
+                delay: 1.5,
                 stagger: 0.2
             }
         );
@@ -293,6 +296,8 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
             font-family: 'InterTight', Arial, sans-serif;
             font-weight: 500;
             z-index: 10;
+            /* text-align: right;
+            left: auto; */
         }
         
         .invitation-text {
