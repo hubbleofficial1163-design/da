@@ -35,18 +35,19 @@
             top: 79px;
             left: 381px;
             color: #000000;
-            font-size: 20px;
+            font-size: 40px;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: normal;
             opacity: 1;
+            font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; /* ← добавить */
         }
         
         @media screen and (max-width: 479px) {
             .she-said {
                 top: 54px;
                 left: 22px;
-                font-size: 18px;
+                font-size: 28px;
             }
         }
         
@@ -84,20 +85,21 @@
             animation: fadeInText 1s ease 4.5s forwards;
         }
         
-.names-text {
-    position: absolute;
-    top: 473px;
-    right: 100px; /* фиксированный отступ справа */
-    color: #000000;
-    font-size: 26px;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: right; /* выравнивание по правому краю */
-    white-space: normal;
-    width: 200px;
-    opacity: 0;
-    animation: fadeInText 1s ease 4.5s forwards;
-}
+        .names-text {
+            position: absolute;
+            top: 473px;
+            right: 100px;
+            color: #000000;
+            font-size: 26px;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: right;
+            white-space: normal;
+            width: 200px;
+            opacity: 0;
+            animation: fadeInText 1s ease 4.5s forwards;
+            font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; /* ← добавить */
+        }
         
         .date-text {
             position: absolute;
@@ -134,7 +136,7 @@
         top: 398px;
         right: 20px; /* отступ справа на мобильных */
         left: auto; /* сбрасываем left */
-        font-size: 20px;
+        font-size: 30px;
         white-space: normal;
         width: 240px;
         text-align: right; /* выравнивание по правому краю */
@@ -309,6 +311,179 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     </div>
 </div>
 
+<!-- ЧЕТВЁРТАЯ СЕКЦИЯ - ЛОКАЦИЯ -->
+<div class="section-location">
+    <h2 class="location-title">Локация</h2>
+    
+    <div class="map-container">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3f77103fd28d43dc3334aa50ce3054d756138698ddffeb97caabebb8e45458ff&amp;source=constructor" width="100%" height="519" frameborder="0"></iframe>
+    </div>
+    
+    <!-- Дополнительная информация (можно добавить при желании) -->
+    <div class="location-address">
+        <p>Ресторан "Саджио"</p>
+        <p>г. Москва, ул. Примерная, д. 1</p>
+    </div>
+</div>
+
+<!-- ПЯТАЯ СЕКЦИЯ - ПОЖЕЛАНИЯ -->
+<div class="section-wishes">
+    <h2 class="wishes-title">Пожелания</h2>
+    
+    <div class="wishes-text">
+        <p>Дорогие гости, наш вечер будет особенным и, к сожалению, не совсем подходящим для детей. Пожалуйста, позвольте себе отдохнуть и насладиться праздником. Просим вас оставить деток в надежных руках на этот вечер.</p>
+        
+        <p>Пожалуйста, не обременяйте себя покупкой красивого букета, вы можете вовсе прийти без цветов или сделать выбор в пользу бутылочки хорошего вина.</p>
+    </div>
+</div>
+
+<!-- ШЕСТАЯ СЕКЦИЯ - ДРЕСС-КОД -->
+<div class="section-dresscode">
+    <h2 class="dresscode-title">Дресс-код</h2>
+    
+    <div class="dresscode-text">
+        <p>Наша свадьба будет выдержана в определенных цветах</p>
+    </div>
+    
+    <div class="color-palette">
+        <div class="color-circle" style="background-color: #f5b1bc;"></div>
+        <div class="color-circle" style="background-color: #c19c82;"></div>
+        <div class="color-circle" style="background-color: #8d9d6e;"></div>
+        <div class="color-circle" style="background-color: #2c3901;"></div>
+    </div>
+    
+    <div class="dresscode-hint">
+        <p>Просим выбрать наряд в представленной цветовой гамме</p>
+    </div>
+</div>
+
+<!-- СЕДЬМАЯ СЕКЦИЯ - АНКЕТА ГОСТЯ -->
+<div class="section-guest-form">
+    <h2 class="form-title">Анкета гостя</h2>
+    
+    <form class="guest-form">
+
+                <!-- 👇 НОВОЕ ПОЛЕ: Имя и фамилия -->
+        <div class="form-group">
+            <label class="form-label">Ваше имя и фамилия</label>
+            <input type="text" name="guest-name" class="form-input" placeholder="Например, Иван Иванов">
+        </div>
+        <!-- Вопрос 1: Присутствие -->
+        <div class="form-group">
+            <label class="form-label">Сможете ли вы присутствовать на нашей свадьбе?</label>
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="attendance" value="yes" class="radio-input">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">Да, с радостью</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="attendance" value="no" class="radio-input">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">К сожалению, не смогу присоединиться</span>
+                </label>
+            </div>
+        </div>
+        
+        <!-- Вопрос 2: +1 -->
+        <div class="form-group">
+            <label class="form-label">Если вы планируете быть не одни, а с парой (+1), пожалуйста, сообщите нам об этом заранее</label>
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="plusone" value="yes" class="radio-input">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">Да, буду с парой (+1)</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="plusone" value="no" class="radio-input">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">Нет, буду один/одна</span>
+                </label>
+            </div>
+        </div>
+        
+        <!-- Вопрос 3: Алкоголь (открывающийся список с множественным выбором) -->
+        <!-- Вопрос 3: Алкоголь (удобный для мобильных) -->
+        <div class="form-group">
+            <label class="form-label">Ваши предпочтения по алкоголю</label>
+            <div class="alcohol-tags">
+                <label class="tag-label">
+                    <input type="checkbox" name="alcohol" value="wine-white" class="tag-input">
+                    <span class="tag">Белое вино</span>
+                </label>
+                <label class="tag-label">
+                    <input type="checkbox" name="alcohol" value="wine-red" class="tag-input">
+                    <span class="tag">Красное вино</span>
+                </label>
+                <label class="tag-label">
+                    <input type="checkbox" name="alcohol" value="champagne" class="tag-input">
+                    <span class="tag">Шампанское</span>
+                </label>
+                <label class="tag-label">
+                    <input type="checkbox" name="alcohol" value="whiskey" class="tag-input">
+                    <span class="tag">Виски</span>
+                </label>
+                <label class="tag-label">
+                    <input type="checkbox" name="alcohol" value="vodka" class="tag-input">
+                    <span class="tag">Водка</span>
+                </label>
+                <label class="tag-label">
+                    <input type="checkbox" name="alcohol" value="cocktails" class="tag-input">
+                    <span class="tag">Коктейли</span>
+                </label>
+                <label class="tag-label">
+                    <input type="checkbox" name="alcohol" value="beer" class="tag-input">
+                    <span class="tag">Пиво</span>
+                </label>
+                <label class="tag-label">
+                    <input type="checkbox" name="alcohol" value="non-alcoholic" class="tag-input">
+                    <span class="tag">Безалкогольные</span>
+                </label>
+            </div>
+            <div class="tags-hint">Можно выбрать несколько</div>
+        </div>
+        
+        <!-- Кнопка отправки (пока просто для красоты) -->
+        <button type="button" class="form-submit">Отправить ответы</button>
+    </form>
+</div>
+
+<!-- ФУТЕР - КОНТАКТЫ -->
+<footer class="section-contacts">
+    <h2 class="contacts-title">Контакты</h2>
+    
+    <div class="contacts-text">
+        <p>Если у вас возникнут вопросы, вы смело можете писать нашему организатору</p>
+        <p class="organizer-name">Алиса</p>
+        <a href="tel:+79888918031" class="organizer-phone">8 (988) 891-80-31</a>
+    </div>
+    
+    <div class="countdown-wrapper">
+        <p class="countdown-label">Мы станем семьей через:</p>
+        
+        <div class="countdown-timer">
+            <div class="countdown-block">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-unit">дней</span>
+            </div>
+            <div class="countdown-block">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-unit">часов</span>
+            </div>
+            <div class="countdown-block">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-unit">минут</span>
+            </div>
+            <div class="countdown-block">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-unit">секунд</span>
+            </div>
+        </div>
+        
+        <p class="countdown-message">До встречи...</p>
+    </div>
+</footer>
+
 
     <!-- GSAP для анимации рисования -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -459,7 +634,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     height: 280px;
     background-color: #f5f5f5;
     background-size: cover;
-    background-position: center;
+    background-position: center 20%;
     margin-bottom: 40px;
 }
 
@@ -660,7 +835,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 /* ПОДКЛЮЧЕНИЕ ТОГО ЖЕ ШРИФТА, ЧТО И ВО ВТОРОЙ СЕКЦИИ */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
 
 /* Третья секция */
 .section-program {
@@ -706,9 +881,9 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 
 /* Заголовок - рукописный шрифт (как просили) */
 .program-title {
-    font-family: 'Cormorant', serif;
-    font-weight: 300;
-    font-size: 64px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 58px;
     font-style: italic;
     text-align: right;
     color: #ffffff;
@@ -824,6 +999,1007 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     }
 }
 
+/* Четвёртая секция - Локация */
+.section-location {
+    width: 100%;
+    min-height: auto;
+    background-color: #ffffff;
+    padding: 60px 20px 80px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+}
+
+/* Заголовок локации */
+.location-title {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    margin: 0 0 40px 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Декоративная линия */
+.location-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: #000000;
+    margin: 15px auto 0;
+    opacity: 0.3;
+}
+
+/* Контейнер карты */
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    aspect-ratio: 484/519;
+    border: none;
+}
+
+/* Адрес */
+.location-address {
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    color: #000000;
+}
+
+.location-address p {
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.location-address p:first-child {
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.location-address p:last-child {
+    font-size: 20px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* ===== ЕДИНЫЙ БРЕЙКПОИНТ ===== */
+@media screen and (max-width: 479px) {
+    .section-location {
+        padding: 40px 15px 60px 15px;
+    }
+
+    .location-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .location-title::after {
+        width: 60px;
+    }
+
+    .map-container iframe {
+        min-height: 300px;
+    }
+
+    .location-address p {
+        font-size: 18px;
+    }
+
+    .location-address p:first-child {
+        font-size: 22px;
+    }
+
+    .location-address p:last-child {
+        font-size: 16px;
+    }
+}
+
+/* Пятая секция - Пожелания */
+.section-wishes {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 20px 80px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+}
+
+/* Заголовок */
+.wishes-title {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    margin: 0 0 40px 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Декоративная линия под заголовком */
+.wishes-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: #000000;
+    margin: 15px auto 0;
+    opacity: 0.3;
+}
+
+/* Контейнер для текста */
+.wishes-text {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+}
+
+.wishes-text p {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 25px 0;
+    color: #000000;
+}
+
+.wishes-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .section-wishes {
+        padding: 40px 15px 60px 15px;
+    }
+
+    .wishes-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .wishes-title::after {
+        width: 60px;
+    }
+
+    .wishes-text p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+}
+
+/* Шестая секция - Дресс-код */
+.section-dresscode {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 20px 80px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+}
+
+/* Заголовок */
+.dresscode-title {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    margin: 0 0 30px 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Декоративная линия под заголовком */
+.dresscode-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: #000000;
+    margin: 15px auto 0;
+    opacity: 0.3;
+}
+
+/* Текст о цветах */
+.dresscode-text {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.dresscode-text p {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    color: #000000;
+    font-style: italic;
+}
+
+/* Палитра цветов */
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+/* Цветовой кружок */
+.color-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.color-circle:hover {
+    transform: scale(1.05);
+}
+
+/* Подсказка */
+.dresscode-hint {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+}
+
+.dresscode-hint p {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    color: #000000;
+    opacity: 0.9;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .section-dresscode {
+        padding: 40px 15px 60px 15px;
+    }
+
+    .dresscode-title {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .dresscode-title::after {
+        width: 60px;
+    }
+
+    .dresscode-text p {
+        font-size: 20px;
+    }
+
+    .color-palette {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .color-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dresscode-hint p {
+        font-size: 18px;
+    }
+}
+
+/* Для совсем маленьких экранов */
+@media screen and (max-width: 360px) {
+    .color-palette {
+        gap: 10px;
+    }
+
+    .color-circle {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Поле ввода имени */
+.form-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #000000;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+.form-input::placeholder {
+    color: #999999;
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .form-input {
+        padding: 12px 15px;
+        font-size: 18px;
+    }
+    
+    .form-input::placeholder {
+        font-size: 16px;
+    }
+}
+/* Седьмая секция - Анкета гостя */
+.section-guest-form {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 20px 80px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+}
+
+/* Заголовок */
+.form-title {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    margin: 0 0 40px 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Декоративная линия под заголовком */
+.form-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: #000000;
+    margin: 15px auto 0;
+    opacity: 0.3;
+}
+
+/* Форма */
+.guest-form {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Группа полей */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Метка вопроса */
+.form-label {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1.4;
+}
+
+/* Группа радио-кнопок */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 10px;
+}
+
+/* Контейнер для радио-кнопки */
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    position: relative;
+}
+
+/* Прячем стандартную радио-кнопку */
+.radio-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Кастомная радио-кнопка */
+.radio-custom {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+/* При выборе */
+.radio-input:checked + .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+/* Текст радио-кнопки */
+.radio-text {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Контейнер для селекта */
+.select-wrapper {
+    width: 100%;
+}
+
+/* Контейнер для тегов */
+.alcohol-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* Лейбл для тега (чтобы область нажатия была больше) */
+.tag-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Прячем стандартный чекбокс */
+.tag-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Сам тег */
+.tag {
+    display: inline-block;
+    padding: 10px 18px;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 40px; /* Скругленные края как у чипсов */
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 0.2s ease;
+    user-select: none; /* Чтобы нельзя было выделить текст */
+}
+
+/* Выбранный тег */
+.tag-input:checked + .tag {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+/* Подсказка */
+.tags-hint {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    color: #666666;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .tag {
+        padding: 8px 14px;
+        font-size: 18px;
+    }
+    
+    .alcohol-tags {
+        gap: 8px;
+    }
+    
+    .tags-hint {
+        font-size: 14px;
+    }
+}
+
+/* Кнопка отправки */
+.form-submit {
+    width: 100%;
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-submit:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .section-guest-form {
+        padding: 40px 15px 60px 15px;
+    }
+
+    .form-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .form-title::after {
+        width: 60px;
+    }
+
+    .form-label {
+        font-size: 20px;
+    }
+
+    .radio-text {
+        font-size: 18px;
+    }
+
+    .alcohol-select {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .alcohol-select option {
+        font-size: 16px;
+    }
+
+    .form-submit {
+        font-size: 20px;
+        padding: 12px 25px;
+    }
+}
+
+/* Футер - Контакты */
+.section-contacts {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 20px 80px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.contacts-title {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    margin: 0 0 40px 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Декоративная линия под заголовком */
+.contacts-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: #000000;
+    margin: 15px auto 0;
+    opacity: 0.3;
+}
+
+/* Текст контактов */
+.contacts-text {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contacts-text p {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+    color: #000000;
+}
+
+.organizer-name {
+    font-size: 28px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 15px 0 5px 0 !important;
+}
+
+.organizer-phone {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dashed #000000;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    transition: opacity 0.2s ease;
+}
+
+.organizer-phone:hover {
+    opacity: 0.7;
+}
+
+/* Контейнер таймера */
+.countdown-wrapper {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.countdown-label {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+/* Таймер */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.countdown-number {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.countdown-unit {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.countdown-message {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #000000;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .section-contacts {
+        padding: 40px 15px 60px 15px;
+    }
+
+    .contacts-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .contacts-title::after {
+        width: 60px;
+    }
+
+    .contacts-text p {
+        font-size: 18px;
+    }
+
+    .organizer-name {
+        font-size: 24px !important;
+    }
+
+    .organizer-phone {
+        font-size: 26px;
+    }
+
+    .countdown-label {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .countdown-timer {
+        gap: 12px;
+    }
+
+    .countdown-block {
+        min-width: 55px;
+    }
+
+    .countdown-number {
+        font-size: 36px;
+    }
+
+    .countdown-unit {
+        font-size: 12px;
+    }
+
+    .countdown-message {
+        font-size: 24px;
+    }
+}
+
+/* Добавьте в начало CSS, после body */
+:root {
+    --bg-primary: #faf4f0;  /* Теплый бежево-розовый фон */
+    --bg-secondary: #f7efe9; /* Чуть насыщеннее для секций */
+    --accent-soft: #d4b5a0;   /* Нежный пудровый */
+    --accent-mint: #b8d8d0;   /* Мятный */
+    --text-soft: #5c5c5c;     /* Мягкий серый вместо черного */
+    --border-light: #e2d5cd;  /* Для линий и рамок */
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+/* Общий фон для секций */
+.section,
+.section-invite,
+.section-program,
+.section-location,
+.section-wishes,
+.section-dresscode,
+.section-guest-form,
+.section-contacts {
+    background-color: var(--bg-primary);
+    position: relative;
+}
+
+/* Добавляем легкую текстуру (опционально) */
+.section::before,
+.section-invite::before,
+.section-program::before,
+.section-location::before,
+.section-wishes::before,
+.section-dresscode::before,
+.section-guest-form::before,
+.section-contacts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 30% 50%, rgba(212, 181, 160, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Меняем черные тексты на мягкий серый */
+.she-said,
+.names-text,
+.invite-title,
+.invite-text,
+.calendar-date,
+.day-name,
+.day-number,
+.program-title,
+.schedule-main,
+.schedule-sub,
+.schedule-time,
+.location-title,
+.location-address p,
+.wishes-title,
+.wishes-text p,
+.dresscode-title,
+.dresscode-text p,
+.dresscode-hint p,
+.form-title,
+.form-label,
+.radio-text,
+.tag,
+.form-submit,
+.contacts-title,
+.contacts-text p,
+.organizer-name,
+.organizer-phone,
+.countdown-label,
+.countdown-number,
+.countdown-message {
+    color: var(--text-soft);
+}
+
+/* Акцентные элементы (линии, обводки) */
+.schedule-line,
+.line,
+.form-submit,
+.radio-custom,
+.tag,
+.form-input,
+.alcohol-select {
+    border-color: var(--border-light);
+}
+
+/* Кнопка отправки */
+.form-submit {
+    border-color: var(--accent-soft);
+    color: var(--accent-soft);
+}
+
+.form-submit:hover {
+    background-color: var(--accent-soft);
+    color: var(--bg-primary);
+}
+
+/* Выбранные теги */
+.tag-input:checked + .tag {
+    background-color: var(--accent-mint);
+    border-color: var(--accent-mint);
+    color: var(--bg-primary);
+}
+
+/* Убираем синее выделение на мобильных */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* Для конкретных интерактивных элементов (на всякий случай) */
+button,
+input,
+select,
+textarea,
+a,
+.radio-label,
+.tag-label,
+.form-submit,
+.organizer-phone,
+.schedule-item,
+[role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+/* Убираем стандартное выделение при фокусе (но оставляем для доступности - можно заменить на свой стиль) */
+:focus {
+    outline: none;
+}
+
+/* Добавляем свой стиль для фокуса (для доступности, но без синего) */
+:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.2);
+    outline-offset: 2px;
+}
+
+/* Для мобильных браузеров */
+@media screen and (max-width: 479px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
     </style>
+    <script>
+    // Таймер обратного отсчета до дня свадьбы
+    function updateCountdown() {
+        // УСТАНОВИТЕ ДАТУ СВАДЬБЫ ЗДЕСЬ (год, месяц-1, день, часы, минуты, секунды)
+        const weddingDate = new Date(2026, 7, 1, 15, 30, 0); // 1 августа 2026, 15:30
+        
+        const now = new Date();
+        const diff = weddingDate - now;
+        
+        if (diff < 0) {
+            // Если дата уже прошла
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+            return;
+        }
+        
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    // Обновляем каждую секунду
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+</script>
 </body>
 </html>
