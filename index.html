@@ -217,11 +217,16 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
         <!-- <div class="date-text">1 августа 2026</div>
         <div class="line"></div> -->
 
+        
+
         <div class="scroll-arrow">
             <svg width="80px" height="80px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.36612 16.1161C7.87796 16.6043 7.87796 17.3957 8.36612 17.8839L23.1161 32.6339C23.6043 33.122 24.3957 33.122 24.8839 32.6339L39.6339 17.8839C40.122 17.3957 40.122 16.6043 39.6339 16.1161C39.1457 15.628 38.3543 15.628 37.8661 16.1161L24 29.9822L10.1339 16.1161C9.64573 15.628 8.85427 15.628 8.36612 16.1161Z" fill="#212121"/>
             </svg>
         </div>
+
+        <img src="flower1.png" alt="Flower" class="flower flower-left">
+        <img src="flower2.png" alt="Flower" class="flower flower-right">
         
     </div>
 
@@ -644,8 +649,8 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 }
 
 .photo-frame {
-    width: 280px;
-    height: 280px;
+    width: 340px;
+    height: 340px;
     background-color: #f5f5f5;
     background-size: cover;
     background-position: center 20%;
@@ -2022,6 +2027,79 @@ a,
         height: 60px;
     }
 }
+
+/* Стили для цветов на первой секции */
+.flower {
+    position: absolute;
+    z-index: 1; /* Чтобы были под текстом, но над фоном */
+    pointer-events: none; /* Чтобы не мешали кликать */
+    opacity: 0; /* Изначально скрыты */
+    animation: fadeInFlowers 1.5s ease-out forwards;
+}
+
+/* Левый цветок (нижний левый угол) - ПОДНЯТ ВЫШЕ */
+.flower-left {
+    bottom: 150px;
+    left: 50px;
+    width: 280px;
+    height: auto;
+    animation: fadeInFlowers 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+    transform: rotate(-90deg) !important;
+}
+
+/* Правый цветок (верхний правый угол) */
+.flower-right {
+    top: 50px;
+    right: 50px;
+    width: 280px;
+    height: auto;
+    animation: fadeInFlowers 1.5s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* Анимация плавного появления */
+@keyframes fadeInFlowers {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .flower-left {
+        bottom: 70px; /* Увеличено для маленьких мобильных */
+        left: 0px;
+        width: 215px; /* Увеличено для маленьких мобильных */
+    }
+    
+    .flower-right {
+        top: 15px;
+        right: 0px;
+        width: 215px; /* Увеличено для маленьких мобильных */
+        
+    }
+}
+
+/* Легкое покачивание */
+@keyframes softSway {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+}
+
+
 
 /* Если нужно изменить цвет стрелочки */
 .scroll-arrow svg path {
