@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <title>Она сказала «Да» – точная копия первой секции</title>
     <style>
         body {
@@ -16,45 +17,51 @@
         }
         
         /* Контейнер как на оригинале */
-        .section {
-            height: 610px;
-            position: relative;
-            overflow: hidden;
-            background-color: #ffffff;
-        }
+/* Контейнер как на оригинале */
+.section {
+    height: 100vh;  /* ← 100vh = 100% высоты окна браузера */
+    min-height: 610px; /* ← минимальная высота, чтобы на маленьких экране не сжималось слишком сильно */
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+
+    padding-top: 50px; 
+}
         
         @media screen and (max-width: 479px) {
-            .section {
-                height: 530px;
-            }
+    .section {
+        height: 100vh;  /* ← тоже на весь экран */
+        min-height: 530px;
+        padding-top: 60px;
+    }
         }
         
         /* Позиционирование элементов как на сайте */
         .she-said {
             position: absolute;
-            top: 79px;
+            top: 149px;
             left: 381px;
             color: #000000;
-            font-size: 40px;
+            font-size: 56px;
             font-weight: 500;
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
             letter-spacing: normal;
             opacity: 1;
-            font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; /* ← добавить */
+            font-family: 'Great Vibes';
         }
         
         @media screen and (max-width: 479px) {
             .she-said {
-                top: 54px;
+                top: 124px;
                 left: 22px;
-                font-size: 28px;
+                font-size: 40px;
             }
         }
         
         /* Контейнер для SVG */
         .svg-container {
             position: absolute;
-            top: 80px;
+            top: 150px;
             left: 418px;
             width: 405px;
             height: 435px;
@@ -65,7 +72,7 @@
         
         @media screen and (max-width: 479px) {
             .svg-container {
-                top: 52px;
+                top: 122px;
                 left: 10px;
                 width: 300px;
                 height: 335px;
@@ -87,18 +94,18 @@
         
         .names-text {
             position: absolute;
-            top: 473px;
+            top: 553px;
             right: 100px;
             color: #000000;
-            font-size: 26px;
+            font-size: 40px;
             font-weight: 500;
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
             text-align: right;
             white-space: normal;
             width: 200px;
             opacity: 0;
             animation: fadeInText 1s ease 4.5s forwards;
-            font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; /* ← добавить */
+            font-family: 'Great Vibes', cursive;
         }
         
         .date-text {
@@ -133,10 +140,10 @@
                 font-size: 16px;
             }
     .names-text {
-        top: 398px;
+        top: 468px;
         right: 20px; /* отступ справа на мобильных */
         left: auto; /* сбрасываем left */
-        font-size: 30px;
+        font-size: 40px;
         white-space: normal;
         width: 240px;
         text-align: right; /* выравнивание по правому краю */
@@ -209,21 +216,28 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
         <div class="names-text">Вадим и <br> Елизавета</div>
         <!-- <div class="date-text">1 августа 2026</div>
         <div class="line"></div> -->
+
+        <div class="scroll-arrow">
+            <svg width="80px" height="80px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.36612 16.1161C7.87796 16.6043 7.87796 17.3957 8.36612 17.8839L23.1161 32.6339C23.6043 33.122 24.3957 33.122 24.8839 32.6339L39.6339 17.8839C40.122 17.3957 40.122 16.6043 39.6339 16.1161C39.1457 15.628 38.3543 15.628 37.8661 16.1161L24 29.9822L10.1339 16.1161C9.64573 15.628 8.85427 15.628 8.36612 16.1161Z" fill="#212121"/>
+            </svg>
+        </div>
         
     </div>
 
         <!-- ВТОРАЯ СЕКЦИЯ -->
     <div class="section-invite">
-        <!-- Квадратное фото -->
-        <div class="photo-frame" style="background-image: url('1.jpg');"></div>
-        
-        <!-- Заголовок -->
+
+                <!-- Заголовок -->
         <div class="invite-title">Дорогие друзья и родные!</div>
         
         <!-- Текст приглашения -->
         <div class="invite-text">
             Это случилось! Мы с радостью приглашаем вас на первый праздник нашей семьи. <br> Нашу свадьбу!
         </div>
+        <!-- Квадратное фото -->
+        <div class="photo-frame" style="background-image: url('1.jpg');"></div>
+        
         
         <!-- Календарь с датой -->
         <div class="calendar-wrapper">
@@ -528,7 +542,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
             { strokeDashoffset: 3000 },
             { 
                 strokeDashoffset: 0, 
-                duration: 15, 
+                duration: 20, 
                 ease: "power2.out",
                 delay: 0.5,
                 scrollTrigger: {
@@ -566,14 +580,14 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     <style>
         /* Точное позиционирование как на оригинале */
         .she-said {
-            font-family: 'InterTight', Arial, sans-serif;
+            font-family: 'Great Vibes';
             font-weight: 500;
             letter-spacing: 0px;
             z-index: 10;
         }
         
         .invitation-text, .names-text, .date-text, .line {
-            font-family: 'InterTight', Arial, sans-serif;
+            font-family: 'Great Vibes', cursive;
             font-weight: 500;
             z-index: 10;
             /* text-align: right;
@@ -585,7 +599,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
         }
         
         .names-text {
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
             text-align: right;
         }
         
@@ -842,9 +856,9 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     position: relative;
     width: 100%;
     min-height: 100vh; /* На мобильных на весь экран */
-    background-image: url('2.jpg');
+    background-image: url('22.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: -50px center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -1965,6 +1979,53 @@ a,
     * {
         -webkit-tap-highlight-color: transparent;
     }
+}
+
+/* Стрелочка вниз */
+.scroll-arrow {
+    position: absolute;
+    bottom: 130px;  /* расстояние от низа */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    animation: bounce 2s infinite; /* анимация покачивания */
+    z-index: 20;
+}
+
+.scroll-arrow svg path {
+    fill: #000000;
+    opacity: 0.5;  /* 0 = полностью прозрачный, 1 = непрозрачный */
+}
+
+/* Анимация покачивания */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* Для мобильных */
+@media screen and (max-width: 479px) {
+    .scroll-arrow {
+        bottom: 130px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .scroll-arrow svg {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Если нужно изменить цвет стрелочки */
+.scroll-arrow svg path {
+    fill: #000000; /* можно изменить на любой цвет */
 }
 
     </style>
