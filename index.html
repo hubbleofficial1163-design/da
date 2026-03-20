@@ -254,7 +254,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
         <!-- Квадратное фото -->
         <div class="photo-wrapper">
     <img src="1.jpg" alt="Фото" class="photo-img">
-    <img src="321.png" alt="Рамка" class="photo-frame-img">
+    <img src="32111.png" alt="Рамка" class="photo-frame-img">
 </div>
         
         
@@ -307,7 +307,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 <div class="section-program">
     <div class="program-content">
         <div class="program-flowers">
-            <img src="flower1.png" alt="Flower" class="program-flower program-flower-left">
+            <img src="flower4.png" alt="Flower" class="program-flower program-flower-left">
             <!-- <img src="flower2.png" alt="Flower" class="program-flower program-flower-right"> -->
         </div>
         <h2 class="program-title">Программа дня</h2>
@@ -398,7 +398,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     
     <div class="wishes-text">
         <p>Дорогие гости, наш вечер будет особенным и, к сожалению, не совсем подходящим для детей. Пожалуйста, позвольте себе отдохнуть и насладиться праздником. Просим вас оставить деток в надежных руках на этот вечер.</p>
-        
+        <div class="wishes-line"></div>
         <p>Пожалуйста, не обременяйте себя покупкой красивого букета, вы можете вовсе прийти без цветов или сделать выбор в пользу бутылочки хорошего вина.</p>
     </div>
     
@@ -423,6 +423,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     <div class="dresscode-hint">
         <p>Просим выбрать наряд в представленной цветовой гамме</p>
     </div>
+    <img src="flower3.png" alt="Flower" class="dresscode-flower-bottom">
 </div>
 
 <!-- СЕДЬМАЯ СЕКЦИЯ - АНКЕТА ГОСТЯ -->
@@ -488,16 +489,8 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
                     <span class="tag">Шампанское</span>
                 </label>
                 <label class="tag-label">
-                    <input type="checkbox" name="alcohol" value="whiskey" class="tag-input">
-                    <span class="tag">Виски</span>
-                </label>
-                <label class="tag-label">
                     <input type="checkbox" name="alcohol" value="vodka" class="tag-input">
                     <span class="tag">Водка</span>
-                </label>
-                <label class="tag-label">
-                    <input type="checkbox" name="alcohol" value="cocktails" class="tag-input">
-                    <span class="tag">Коктейли</span>
                 </label>
                 <label class="tag-label">
                     <input type="checkbox" name="alcohol" value="beer" class="tag-input">
@@ -518,7 +511,11 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 
 <!-- ФУТЕР - КОНТАКТЫ -->
 <footer class="section-contacts">
-    <h2 class="contacts-title">Контакты</h2>
+        <div class="contacts-header">
+            <img src="flower4.png" alt="Flower" class="contacts-flower-left">
+            <h2 class="contacts-title">Контакты</h2>
+            <img src="flower3.png" alt="Flower" class="contacts-flower-right">
+        </div>
     
     <div class="contacts-text">
         <p>Если у вас возникнут вопросы, вы смело можете писать нашему организатору</p>
@@ -859,7 +856,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     }
     
     .day-number {
-        font-size: 20px;
+        font-size: 18px;
     }
 }   
 
@@ -1553,7 +1550,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #000000;
+    background-color: #6666669d;
 }
 
 /* Текст радио-кнопки */
@@ -1892,7 +1889,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     --bg-primary: #faf4f0;  /* Теплый бежево-розовый фон */
     --bg-secondary: #f7efe9; /* Чуть насыщеннее для секций */
     --accent-soft: #d4b5a0;   /* Нежный пудровый */
-    --accent-mint: #b8d8d0;   /* Мятный */
+    --accent-mint: #d4b5a0;   /* Мятный */
     --text-soft: #5c5c5c;     /* Мягкий серый вместо черного */
     --border-light: #e2d5cd;  /* Для линий и рамок */
 }
@@ -2095,7 +2092,7 @@ a,
     height: auto;
     animation: fadeInFlowers 1.5s ease-out forwards;
     animation-delay: 0.3s;
-    transform: rotate(-90deg) !important;  /* ← убрать !important */
+    transform: rotate(-90deg);  /* ← убрать !important */
 }
 
 /* Правый цветок (верхний правый угол) */
@@ -2124,8 +2121,9 @@ a,
 @media screen and (max-width: 479px) {
     .flower-left {
         bottom: 70px; /* Увеличено для маленьких мобильных */
-        left: 0px;
+        left: -50px;
         width: 215px; /* Увеличено для маленьких мобильных */
+        transform: rotate(-90deg)
     }
     
     .flower-right {
@@ -2159,7 +2157,7 @@ a,
     align-items: flex-end;
     gap: 8px;
     opacity: 0;
-    animation: fadeInText 1s ease 4.5s forwards;
+    animation: fadeInText 1s ease 2.0s forwards;
     z-index: 10;
 }
 
@@ -2316,7 +2314,7 @@ a,
 .program-flower-left {
     bottom: 50px;
     left: -20px;  /* компенсируем padding секции 20px */
-    transform: rotate(-90deg);
+    /* transform: rotate(-90deg); */
 }
 
 .program-flower-right {
@@ -2469,13 +2467,134 @@ a,
 
 .photo-frame-img {
     position: absolute;
-    top: -30px;
-    left: -34px;
-    width: 120%;
-    height: 120%;
+    top: -26px;
+    left: -26px;
+    width: 115%;
+    height: 115%;
     object-fit: contain;
     pointer-events: none;
     z-index: 2;
+}
+
+/* Контейнер для заголовка контактов с цветами */
+.contacts-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Левый цветок (прижат к левому краю) */
+.contacts-flower-left {
+    position: absolute;
+    left: -20px;          /* компенсируем padding секции */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: auto;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Правый цветок (прижат к правому краю) */
+.contacts-flower-right {
+    position: absolute;
+    right: -20px;         /* компенсируем padding секции */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: auto;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Заголовок контактов */
+.contacts-title {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+/* Декоративная линия под заголовком (оставляем) */
+.contacts-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: #000000;
+    margin: 15px auto 0;
+    opacity: 0.3;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .contacts-flower-left,
+    .contacts-flower-right {
+        width: 150px;
+    }
+    
+    .contacts-flower-left {
+        left: -15px;
+    }
+    
+    .contacts-flower-right {
+        right: -15px;
+    }
+    
+    .contacts-title {
+        font-size: 36px;
+        padding: 0 50px;
+    }
+}
+
+/* Линия между абзацами в секции пожелания */
+.wishes-line {
+    width: 80px;
+    height: 1px;
+    background-color: #000000;
+    margin: 25px auto;
+    opacity: 0.3;
+}
+
+/* Для мобильных */
+@media screen and (max-width: 479px) {
+    .wishes-line {
+        width: 60px;
+        margin: 20px auto;
+    }
+}
+
+
+/* Цветок в конце секции дресс-код справа */
+.dresscode-flower-bottom {
+    position: absolute;
+    bottom: 20px;           /* отступ снизу */
+    right: -20px;           /* прижимаем к правому краю (компенсируем padding) */
+    width: 60px;
+    height: auto;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .dresscode-flower-bottom {
+        width: 140px;
+        right: 0px;
+        bottom: 10px;
+    }
 }
 
     </style>
