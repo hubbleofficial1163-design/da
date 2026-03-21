@@ -227,7 +227,10 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
             <div class="music-hint">Пусть этот трек перенесет тебя к нам. Нажми!</div>
         </div>
 
-        
+        <audio id="weddingAudio" preload="auto">
+            <source src="1.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио.
+        </audio>
 
         <div class="scroll-arrow">
             <svg width="80px" height="80px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -311,6 +314,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
             <!-- <img src="flower2.png" alt="Flower" class="program-flower program-flower-right"> -->
         </div>
         <h2 class="program-title">Программа дня</h2>
+        
         
         <!-- Элемент 1: WELCOME + 1.png -->
         <div class="schedule-item">
@@ -704,7 +708,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 }
 
 .invite-title {
-    font-size: 32px;
+    font-size: 38px;
     font-weight: 500;
     text-align: center;
     color: #000000;
@@ -785,7 +789,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 
 @media screen and (max-width: 479px) {
     .invite-title {
-        font-size: 28px;
+        font-size: 45px;
     }
     
     .invite-text {
@@ -2036,7 +2040,7 @@ a,
 /* Стрелочка вниз */
 .scroll-arrow {
     position: absolute;
-    bottom: 130px;  /* расстояние от низа */
+    bottom: 80px;  /* расстояние от низа */
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
@@ -2064,7 +2068,7 @@ a,
 /* Для мобильных */
 @media screen and (max-width: 479px) {
     .scroll-arrow {
-        bottom: 130px;
+        bottom: 80px;
         width: 60px;
         height: 60px;
     }
