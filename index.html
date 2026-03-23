@@ -238,8 +238,8 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
             </svg>
         </div>
 
-        <img src="flower1.png" alt="Flower" class="flower flower-left">
-        <img src="flower2.png" alt="Flower" class="flower flower-right">
+        <img src="flower11.png" alt="Flower" class="flower flower-left">
+        <img src="flower22.png" alt="Flower" class="flower flower-right">
         
     </div>
 
@@ -251,13 +251,14 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
         
         
         <!-- Текст приглашения -->
-        <div class="invite-text">
-            Это случилось! Мы с радостью приглашаем вас на первый праздник нашей семьи. <br> Нашу свадьбу!
-        </div>
+<div class="invite-text">
+    Это случилось! Мы с радостью приглашаем вас на первый праздник нашей семьи. <br>
+    <span class="highlight">Нашу свадьбу!</span>
+</div>
         <!-- Квадратное фото -->
         <div class="photo-wrapper">
     <img src="1.jpg" alt="Фото" class="photo-img">
-    <img src="32111.png" alt="Рамка" class="photo-frame-img">
+    <!-- <img src="32111.png" alt="Рамка" class="photo-frame-img"> -->
 </div>
         
         
@@ -301,7 +302,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
                     <span class="day-number">13</span>
                 </div>
             </div>
-            <img src="flower2.png" alt="Flower" class="invite-flower-right">
+            <img src="flower22.png" alt="Flower" class="invite-flower-right">
         </div>
     </div>
     
@@ -310,7 +311,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 <div class="section-program">
     <div class="program-content">
         <div class="program-flowers">
-            <img src="flower4.png" alt="Flower" class="program-flower program-flower-left">
+            <img src="flower44.png" alt="Flower" class="program-flower program-flower-left">
             <!-- <img src="flower2.png" alt="Flower" class="program-flower program-flower-right"> -->
         </div>
         <h2 class="program-title">Программа дня</h2>
@@ -794,6 +795,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     
     .invite-text {
         font-size: 16px;
+        margin-top: -20px;
     }
     
     .calendar-strip {
@@ -954,7 +956,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 
 /* Заголовок - рукописный шрифт (как просили) */
 .program-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     font-weight: 400;
     font-size: 58px;
     font-style: italic;
@@ -1720,7 +1722,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     font-size: 48px;
     font-weight: 500;
     text-align: center;
-    color: #000000;
+    color: var(--text-soft);
     margin: 0 0 40px 0;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -1816,7 +1818,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     font-size: 48px;
     font-weight: 500;
-    color: #000000;
+    color:  #f8627b;
     line-height: 1;
     margin-bottom: 5px;
 }
@@ -1825,7 +1827,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     font-size: 16px;
     font-weight: 400;
-    color: #666666;
+    color: #f8627b;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1967,7 +1969,6 @@ body {
 .organizer-name,
 .organizer-phone,
 .countdown-label,
-.countdown-number,
 .countdown-message {
     color: var(--text-soft);
 }
@@ -2527,7 +2528,7 @@ a,
     font-size: 48px;
     font-weight: 500;
     text-align: center;
-    color: #000000;
+    color: var(--text-soft);
     margin: 0;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -2604,6 +2605,28 @@ a,
         right: 0px;
         bottom: 10px;
     }
+}
+
+.invite-text {
+    max-width: 500px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--text-soft);
+    margin: 0 0 40px 0;
+    padding: 0 20px;
+    margin-top: -20px;
+}
+
+.invite-text .highlight {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--text-soft);
+    letter-spacing: 1px;
 }
 
     </style>
