@@ -2637,6 +2637,20 @@ a,
     font-family: 'Playfair Display', serif;
 }   
 
+        /* ПРИНУДИТЕЛЬНОЕ УМЕНЬШЕНИЕ КАРТЫ */
+.section-location .map-container {
+    max-width: 380px !important;
+    width: 380px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.section-location .map-container iframe {
+    height: 280px !important;
+    min-height: 280px !important;
+    aspect-ratio: unset !important;
+}
+
     </style>
     <script>
     // Таймер обратного отсчета до дня свадьбы
