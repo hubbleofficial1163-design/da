@@ -381,7 +381,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 <!-- ЧЕТВЁРТАЯ СЕКЦИЯ - ЛОКАЦИЯ -->
 <div class="section-location">
     <h2 class="location-title">Локация</h2>
-    <img src="flower3.png" alt="Flower" class="location-flower-top">
+    <img src="flower33.png" alt="Flower" class="location-flower-top">
     
     <div class="map-container">
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3f77103fd28d43dc3334aa50ce3054d756138698ddffeb97caabebb8e45458ff&amp;source=constructor" width="100%" height="519" frameborder="0"></iframe>
@@ -392,14 +392,14 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
         <p>Ресторан "Саджио"</p>
         <p>г. Ростов-на-Дону, улица Бодрая 117</p>
     </div>
-    <img src="flower4.png" alt="Flower" class="location-flower-bottom">
+    <img src="flower44.png" alt="Flower" class="location-flower-bottom">
 </div>
 
 <!-- ПЯТАЯ СЕКЦИЯ - ПОЖЕЛАНИЯ -->
 <div class="section-wishes">
     <h2 class="wishes-title">Пожелания</h2>
 
-    <img src="flower2.png" alt="Flower" class="wishes-flower-top">
+    <img src="flower22.png" alt="Flower" class="wishes-flower-top">
     
     <div class="wishes-text">
         <p>Дорогие гости, наш вечер будет особенным и, к сожалению, не совсем подходящим для детей. Пожалуйста, позвольте себе отдохнуть и насладиться праздником. Просим вас оставить деток в надежных руках на этот вечер.</p>
@@ -412,7 +412,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 <!-- ШЕСТАЯ СЕКЦИЯ - ДРЕСС-КОД -->
 <div class="section-dresscode">
     <h2 class="dresscode-title">Дресс-код</h2>
-    <img src="flower4.png" alt="Flower" class="dresscode-flower-top">
+    <img src="flower44.png" alt="Flower" class="dresscode-flower-top">
     
     <div class="dresscode-text">
         <p>Наша свадьба будет выдержана в определенных цветах</p>
@@ -428,7 +428,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     <div class="dresscode-hint">
         <p>Просим выбрать наряд в представленной цветовой гамме</p>
     </div>
-    <img src="flower3.png" alt="Flower" class="dresscode-flower-bottom">
+    <img src="flower33.png" alt="Flower" class="dresscode-flower-bottom">
 </div>
 
 <!-- СЕДЬМАЯ СЕКЦИЯ - АНКЕТА ГОСТЯ -->
@@ -502,6 +502,10 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
                     <span class="tag">Пиво</span>
                 </label>
                 <label class="tag-label">
+                    <input type="checkbox" name="alcohol" value="konyak" class="tag-input">
+                    <span class="tag">Коньяк</span>
+                </label>
+                <label class="tag-label">
                     <input type="checkbox" name="alcohol" value="non-alcoholic" class="tag-input">
                     <span class="tag">Безалкогольные</span>
                 </label>
@@ -517,9 +521,9 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 <!-- ФУТЕР - КОНТАКТЫ -->
 <footer class="section-contacts">
         <div class="contacts-header">
-            <img src="flower4.png" alt="Flower" class="contacts-flower-left">
+            <img src="flower44.png" alt="Flower" class="contacts-flower-left">
             <h2 class="contacts-title">Контакты</h2>
-            <img src="flower3.png" alt="Flower" class="contacts-flower-right">
+            <img src="flower33.png" alt="Flower" class="contacts-flower-right">
         </div>
     
     <div class="contacts-text">
@@ -762,9 +766,10 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 }
 
 .day-number {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.2;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
 }
 
 /* Выделение сердечком */
@@ -837,7 +842,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     height: 100px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -47%);
     z-index: 1;
     opacity: 0.5;
 }
@@ -919,7 +924,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* ВЕСЬ КОНТЕЙНЕР СПРАВА */
+    justify-content: center; /* ВЕСЬ КОНТЕЙНЕР СПРАВА */
     padding: 40px 20px 0 20px;
     box-sizing: border-box;
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
@@ -949,7 +954,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     max-width: 400px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     color: var(--text-soft, #5c5c5c); /* Был #ffffff */
     text-shadow: none; /* Убрать тень */
 }
@@ -960,14 +965,14 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     font-weight: 400;
     font-size: 58px;
     font-style: italic;
-    text-align: right;
+    text-align: center;
     color: var(--text-soft, #5c5c5c); /* Был #ffffff */
     letter-spacing: 1px;
 }
 
 /* Элемент расписания */
 .schedule-item {
-    text-align: right; /* ВЕСЬ ТЕКСТ СПРАВА */
+    text-align: center; /* ВЕСЬ ТЕКСТ СПРАВА */
     margin-bottom: 35px;
     width: 100%;
 }
@@ -1011,7 +1016,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     width: 70px;
     height: 1px;
     background-color: var(--border-light, #e2d5cd); /* Был #ffffff */
-    margin-left: auto;
+    margin: 8px auto 0;
     margin-top: 5px;
     opacity: 0.8;
 }
@@ -1019,18 +1024,18 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
 /* ТОЛЬКО ДЛЯ МОБИЛЬНЫХ */
 @media screen and (max-width: 480px) {
     .section-program {
-        justify-content: flex-end; /* ВСЁ РАВНО ПРИЖАТО К ПРАВУ */
+        justify-content: center; /* ВСЁ РАВНО ПРИЖАТО К ПРАВУ */
         padding: 30px 15px 0 15px;
     }
     
     .program-content {
         max-width: 100%;
-        align-items: flex-end; /* ПРИЖАТО К ПРАВУ */
+        align-items: center; /* ПРИЖАТО К ПРАВУ */
     }
     
     .program-title {
         font-size: 48px;
-        text-align: right; /* ПРИЖАТО К ПРАВУ */
+        text-align: center; /* ПРИЖАТО К ПРАВУ */
         margin-bottom: 25px;
     }
     
@@ -1818,7 +1823,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     font-size: 48px;
     font-weight: 500;
-    color:  #f8627b;
+    color:  #f5b1bc;
     line-height: 1;
     margin-bottom: 5px;
 }
@@ -1827,7 +1832,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     font-size: 16px;
     font-weight: 400;
-    color: #f8627b;
+    color: #f5b1bc;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -2240,13 +2245,13 @@ a,
 }
 
 /* Стили для фото в программе дня */
-.schedule-item {
+/* .schedule-item {
     display: flex;
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 35px;
     width: 100%;
-}
+} */
 
 .schedule-icon {
     flex-shrink: 0;
@@ -2265,14 +2270,9 @@ a,
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.schedule-item:hover .schedule-img {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
 .schedule-info {
     flex: 1;
-    text-align: right;
+    text-align: center; /* ← ИЗМЕНИТЬ С right НА center */
 }
 
 /* Адаптация для мобильных */
@@ -2445,8 +2445,8 @@ a,
 }
 
 .calendar-day.highlight .day-number {
-    font-size: 32px;           /* увеличиваем размер */
-    font-weight: 700;          /* делаем жирнее */
+    font-size: 32px;
+    font-weight: 700;
     position: relative;
     z-index: 3;
 }
@@ -2629,6 +2629,10 @@ a,
     letter-spacing: 1px;
 }
 
+.calendar-day .day-number {
+    font-family: 'Playfair Display', serif;
+}   
+
     </style>
     <script>
     // Таймер обратного отсчета до дня свадьбы
@@ -2700,6 +2704,87 @@ a,
     // Обновляем каждую секунду
     updateCountdown();
     setInterval(updateCountdown, 1000);
+
+
+    // Отправка данных анкеты гостя
+document.addEventListener('DOMContentLoaded', function() {
+    const submitBtn = document.querySelector('.form-submit');
+    
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function() {
+            // Собираем данные
+            const guestName = document.querySelector('input[name="guest-name"]');
+            const attendanceRadio = document.querySelector('input[name="attendance"]:checked');
+            const plusoneRadio = document.querySelector('input[name="plusone"]:checked');
+            const alcoholCheckboxes = document.querySelectorAll('input[name="alcohol"]:checked');
+            
+            // Проверки
+            if (!guestName || !guestName.value.trim()) {
+                alert('Пожалуйста, укажите ваше имя и фамилию');
+                if (guestName) guestName.focus();
+                return;
+            }
+            
+            if (!attendanceRadio) {
+                alert('Пожалуйста, выберите, сможете ли вы присутствовать');
+                return;
+            }
+            
+            if (!plusoneRadio) {
+                alert('Пожалуйста, сообщите, будете ли вы с парой (+1)');
+                return;
+            }
+            
+            // Собираем алкоголь
+            const alcohol = [];
+            alcoholCheckboxes.forEach(checkbox => {
+                alcohol.push(checkbox.value);
+            });
+            
+            // Меняем кнопку
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Отправка...';
+            submitBtn.disabled = true;
+            
+            // ВАШ URL ОТ APPS SCRIPT
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzz4CStSMu6bDnxRRYEckaIgSJU8fDSnYn2bi9_-wngGtvAPyT0WOX9ghpacQy1R032/exec';
+            
+            // Создаем form data для отправки
+            const formData = new URLSearchParams();
+            formData.append('name', guestName.value.trim());
+            formData.append('attendance', attendanceRadio.value);
+            formData.append('plusone', plusoneRadio.value);
+            formData.append('alcohol', alcohol.join(','));
+            
+            // Отправляем
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message || 'Спасибо! Ваши ответы отправлены.');
+                    
+                    // Очищаем форму
+                    guestName.value = '';
+                    document.querySelectorAll('input[type="radio"]').forEach(el => el.checked = false);
+                    document.querySelectorAll('input[type="checkbox"]').forEach(el => el.checked = false);
+                } else {
+                    alert('Ошибка: ' + (data.message || 'Попробуйте еще раз'));
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                alert('Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
+});
 </script>
 </body>
 </html>
