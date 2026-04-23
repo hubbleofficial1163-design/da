@@ -461,7 +461,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
         </div>
         
         <!-- Вопрос 2: +1 -->
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label class="form-label">Если вы планируете быть не одни, а с парой (+1), пожалуйста, сообщите нам об этом заранее</label>
             <div class="radio-group">
                 <label class="radio-label">
@@ -475,7 +475,7 @@ M203.54 112.818C199.689 116.1 196.544 115.79 194.103 111.887C191.262 106.995 192
                     <span class="radio-text">Нет, буду один/одна</span>
                 </label>
             </div>
-        </div>
+        </div> -->
         
         <!-- Вопрос 3: Алкоголь (открывающийся список с множественным выбором) -->
         <!-- Вопрос 3: Алкоголь (удобный для мобильных) -->
@@ -2736,7 +2736,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Собираем данные
             const guestName = document.querySelector('input[name="guest-name"]');
             const attendanceRadio = document.querySelector('input[name="attendance"]:checked');
-            const plusoneRadio = document.querySelector('input[name="plusone"]:checked');
+            // const plusoneRadio = document.querySelector('input[name="plusone"]:checked');
             const alcoholCheckboxes = document.querySelectorAll('input[name="alcohol"]:checked');
             
             // Проверки
@@ -2751,10 +2751,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            if (!plusoneRadio) {
-                alert('Пожалуйста, сообщите, будете ли вы с парой (+1)');
-                return;
-            }
+            // if (!plusoneRadio) {
+            //     alert('Пожалуйста, сообщите, будете ли вы с парой (+1)');
+            //     return;
+            // }
             
             // Собираем алкоголь
             const alcohol = [];
@@ -2774,7 +2774,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new URLSearchParams();
             formData.append('name', guestName.value.trim());
             formData.append('attendance', attendanceRadio.value);
-            formData.append('plusone', plusoneRadio.value);
+            // formData.append('plusone', plusoneRadio.value);
             formData.append('alcohol', alcohol.join(','));
             
             // Отправляем
